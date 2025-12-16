@@ -79,7 +79,7 @@ elif question == "Sponge Bob":
     colors = bob_colors
 else:
     art = load_matrix("plankton.txt")
-    pl_colors
+    colors = pl_colors 
 
 x0 = - (len(art[0]) * size) // 2
 y0 = (len(art) * size) // 2 
