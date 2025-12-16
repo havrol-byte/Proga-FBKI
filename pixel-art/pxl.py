@@ -79,9 +79,9 @@ y1 = (len(sponge_bob) * size) // 2
 x2 = (len(plankton[0]) * size) // 2 - 300
 y2 = (len(plankton) * size) // 2 
 
-draw(plankton, g_colors, x0, y0)
+draw(plankton, g_colors, x2, y2)
 draw(sponge_bob, bob_colors, x1, y1)'''
-draw(garry, pl_colors, x2, y2)
+draw(garry, pl_colors, x0, y0)
 
 
 
