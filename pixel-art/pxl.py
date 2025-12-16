@@ -1,6 +1,12 @@
 import turtle
+import os
 
-screen = turtle.Screen()
+cwd = os.getcwd()
+
+print(cwd)
+print(os.listdir(cwd))
+
+"""screen = turtle.Screen()
 screen.setup(600, 600)
 screen.bgcolor("white")
 
@@ -14,7 +20,7 @@ size = 10
 
 bob_colors = {
     0: "white",
-    1: "#000000",
+    1: "black",
     2: "#b60005",
     3: "#697ef4",
     4: "#fded47",
@@ -86,3 +92,4 @@ draw(garry, pl_colors, x0, y0)
 
 
 turtle.done()
+"""
