@@ -61,4 +61,30 @@ class Aeroflot:
         if len(nTime) == 5:
             self.time = nTime
 
-            
+    def get_point(self):
+        return self.point
+    
+    def get_number(self):
+        return self.number
+    
+    def get_plane_type(self):
+        return self.plane_type
+    
+    def get_time(self):
+        return self.time
+
+    def reaming_time(self, time_now = '00:00'):
+        time1 = time_now.split(':')
+        time2 = self.time.split(':')
+        for i in range(2):
+            time1[i] = int(time1[i])
+            time2[i] = int(time2[i])
+        result = [time1[0] - time2[0], time1[1] - time2[1]]
+
+        if result[1] < 0:
+            result[0] -= 1
+            result[1] += 60
+        if result[0] < 0:
+            print('Ошибка во времени, либо вы опоздали')
+        else: 
+            print(f'Осталось {result[0]} ч {result[1]} мин до вылета')
