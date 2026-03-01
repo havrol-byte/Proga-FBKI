@@ -88,3 +88,46 @@ class Aeroflot:
             print('Ошибка во времени, либо вы опоздали')
         else: 
             print(f'Осталось {result[0]} ч {result[1]} мин до вылета')
+
+# // задача 4 \\
+
+class Route:
+    def __init__(self, start, end, number, distance):
+        self.start = start
+        self.end = end
+        self.number = number
+        self.distance = distance
+
+    def get_start(self):
+        return self.start
+    
+    def get_end(self):
+        return self.end
+    
+    def get_number(self):
+        return self.number
+    
+    def get_distance(self):
+        return self.distance
+
+    def set_start(self, start):
+        self.start = start
+    
+    def set_end(self, end):
+        self.end = end
+    
+    def set_number(self, number):
+        self.number = number
+    
+    def set_distance(self, distance):
+        self.distance = distance
+    
+    def travel_time(self, speed):
+        if speed <= 0:
+            return "Скорость должна быть положительной"
+        
+        hours = self.distance / speed
+        h = int(hours)
+        m = int((hours - h) * 60)
+        
+        return f"Время в пути: {h} ч {m} мин"
