@@ -19,7 +19,7 @@ class Dog(Animal):
         return "Мясо, кости"
 
     def getDescription(self):
-        return "Собака — друг человека"
+        return "Собака - друг человека"
 
 class Cat(Animal):
     def makeNoise(self):
@@ -29,7 +29,7 @@ class Cat(Animal):
         return "Рыба, корм"
 
     def getDescription(self):
-        return "Кошка — пушистый тыгыдык"
+        return "Кошка - пушистый тыгыдык"
 
 class Bear(Animal):
     def makeNoise(self):
@@ -39,7 +39,7 @@ class Bear(Animal):
         return "Ягоды, рыба, мед"   
 
     def getDescription(self):
-        return "Медведь — сел в машину и..."
+        return "Медведь - сел в машину и..."
 
 class Veterinarian:
     def treatAnimal(self, animal: Animal):
@@ -48,8 +48,8 @@ class Veterinarian:
 
 animals = [
     Dog("Шарик"),
-    Cat("Мурка"),
-    Bear("Медведь")
+    Cat("Куки"),
+    Bear("Миша")
 ]
 
 vet = Veterinarian()
