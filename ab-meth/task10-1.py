@@ -2,8 +2,8 @@ import abc
 
 class Middle(abc.ABC):
     def __init__(self, user_votes, expert_votes):
-        self.user_votes = user_votes                   # пользовательские оценки
-        self.expert_votes = expert_votes               # оценки критиков
+        self.user_votes = user_votes
+        self.expert_votes = expert_votes
 
     def get_correct_user_votes(self):
         """Возвращает нормализованный список пользовательских оценок
@@ -53,17 +53,17 @@ class Harmonic(Middle):
 
         return len(votes) / sum(map(lambda vote: 1 / vote, votes))
 
-if __name__ == "__main__":
-    user_votes = [5, 15, 25, 35, 45, 55, 65, 75, 85, 95]
-    expert_votes = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
-    avg = Average(user_votes, expert_votes)
-    med = Median(user_votes, expert_votes)
-    harm = Harmonic(user_votes, expert_votes)
+user_votes = [5, 15, 25, 35, 45, 55, 65, 75, 85, 95]
+expert_votes = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
-    print("Average user:", avg.get_average(users=True))
-    print("Average expert:", avg.get_average(users=False))
-    print("Median user:", med.get_average(users=True))
-    print("Median expert:", med.get_average(users=False))
-    print("Harmonic user:", harm.get_average(users=True))
-    print("Harmonic expert:", harm.get_average(users=False))
+avg = Average(user_votes, expert_votes)
+med = Median(user_votes, expert_votes)
+harm = Harmonic(user_votes, expert_votes)
+
+print("Average user:", avg.get_average(users=True))
+print("Average expert:", avg.get_average(users=False))
+print("Median user:", med.get_average(users=True))
+print("Median expert:", med.get_average(users=False))
+print("Harmonic user:", harm.get_average(users=True))
+print("Harmonic expert:", harm.get_average(users=False))
